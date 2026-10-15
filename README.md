@@ -1,17 +1,14 @@
 # partner-integration-spec
 
-Reference implementation for the partner webhook flow. The signed-off interface
-contract is in [`docs/integration-spec.docx`](docs/integration-spec.docx).
+Reference implementation for the Northwind partner webhook flow.
 
-## Notice — security proof of concept
+## Requirements
 
-This repository is a **proof of concept for a vulnerability reported to OpenAI**
-(Bugcrowd submission `1f32f024-5a60-42db-a19f-7958496f623c`), published only to
-demonstrate a delivery path to the vendor's triage team.
+The signed-off integration requirements are in
+[`docs/partner-integration-requirements.docx`](docs/partner-integration-requirements.docx).
+That document is authoritative; this README only summarises the repo layout.
 
-`docs/integration-spec.docx` carries a CSS payload in its embedded font name. If
-you preview it in an affected client, the names of the documents you have open are
-sent to a researcher-controlled logging endpoint that records nothing but the
-request path. No code executes, and no file contents are read. Do not preview it
-if that is not what you want. This repository will be deleted once the vendor's
-triage is complete.
+## Layout
+
+- `src/index.js` — webhook receiver stub
+- `docs/` — interface contract and requirements
